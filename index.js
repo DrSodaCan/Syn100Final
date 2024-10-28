@@ -1,6 +1,6 @@
-// Initialize the map centered on California
 import {waypoints} from "./waypoints";
 
+// Initialize the map centered on California
 var map = L.map('map').setView([36.7783, -119.4179], 6);
 
 // Add OpenStreetMap tiles
@@ -9,17 +9,26 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Custom icon for the user's location
-let userIcon = L.icon({
+var userIcon = L.icon({
     iconUrl: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
-    iconSize: [32, 32],  // Size of the icon
-    iconAnchor: [16, 32], // Point of the icon which will correspond to marker's location
-    popupAnchor: [0, -32] // Point from which the popup should open relative to the iconAnchor
+    iconSize: [32, 32],
+    iconAnchor: [16, 32],
+    popupAnchor: [0, -32]
 });
 
 
+// Display waypoints without user distance initially
+waypoints.forEach(function(waypoint) {
+    L.marker(waypoint.coords)
+        .addTo(map)
+        .bindPopup(
+            `<b>${waypoint.name}</b><br>${waypoint.description}<br>
+      <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">`
+        );
+});
+
 // Function to calculate the distance between two coordinates
 function calculateDistance(lat1, lon1, lat2, lon2) {
-    //formatted like this to account for earth being round
     const R = 6371; // Radius of Earth in kilometers
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
@@ -31,8 +40,8 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
     return R * c;
 }
 
-// Function to update waypoints with user's distance
-function updateDistances(userCoords) {
+// Async function to update distances after obtaining user location
+function updateDistancesWithUserLocation(userCoords) {
     let closestWaypoint = null;
     let closestDistance = Infinity;
 
@@ -46,13 +55,13 @@ function updateDistances(userCoords) {
             closestWaypoint = waypoint;
         }
 
-        // Add a marker with updated popup including distance
+        // Update marker with distance info in popup
         L.marker(waypoint.coords)
             .addTo(map)
             .bindPopup(
                 `<b>${waypoint.name}</b><br>${waypoint.description}<br>
-            <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image"><br>
-            <b>Distance:</b> ${distance.toFixed(2)} km`
+        <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image"><br>
+        <b>Distance:</b> ${distance.toFixed(2)} km`
             );
     });
 
@@ -64,7 +73,7 @@ function updateDistances(userCoords) {
     }
 }
 
-// Use the Geolocation API to get the user's current location
+// Fetch user's location and update distances in a non-blocking way
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
         function(position) {
@@ -79,8 +88,8 @@ if (navigator.geolocation) {
                 .bindPopup("<b>Your Location</b>")
                 .openPopup();
 
-            // Update distances for each waypoint from user's location
-            updateDistances(userCoords);
+            // Update distances for each waypoint after getting user location
+            updateDistancesWithUserLocation(userCoords);
 
             // Optional: Center the map around the user's location
             map.setView(userCoords, 7);
