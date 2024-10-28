@@ -12,13 +12,12 @@ h1{
     height: 600px;
     width: 100%;
 }
-#map a:link, #map a:visited{
-    color: black;
-}
+
 #map a:hover{
     color: #222222;
     text-decoration: none;
 }
+
 .popup-image {
     width: 100px;
     height: auto;
@@ -43,4 +42,15 @@ a:link, a:visited{
 a:hover{
     text-decoration: underline;
     color: #00BBFF;
+}
+
+.leaflet-control a:link{
+    color: black;
+}
+.leaflet-popup-content a:link, .leaflet-popup-content a:visited{
+    color: #00BBFF;
+}
+.leaflet-popup-content a:hover{
+    color: #0088FF;
+    text-decoration: underline;
 }
