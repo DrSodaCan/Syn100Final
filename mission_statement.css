@@ -17,27 +17,7 @@ body{
     margin-left: 5%;
     color: #FFFFFF;
 }
-a:link, a:visited{
-    text-decoration: none;
-    color: aqua;
-    /*Add underline*/
-
-}
-a:hover{
-    text-decoration: underline;
-    color: #00BBFF;
-}
 body h1{
     color: white;
     text-align: center;
-}
-#main_bar{
-    text-align: center;
-    margin-top: 0;
-    padding-top: -50px;
-}
-#main_bar a{
-    padding-left: 2%;
-    padding-right: 2%;
-
 }

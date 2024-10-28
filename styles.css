@@ -1,8 +1,46 @@
+body{
+    background-color: #121212;
+
+}
+h1{
+    color: white;
+    text-align: center;
+
+}
+
 #map {
     height: 600px;
     width: 100%;
 }
+#map a:link, #map a:visited{
+    color: black;
+}
+#map a:hover{
+    color: #222222;
+    text-decoration: none;
+}
 .popup-image {
     width: 100px;
     height: auto;
+}
+
+#main_bar{
+    text-align: center;
+    margin-top: 0;
+    padding-top: -50px;
+}
+#main_bar a{
+    padding-left: 2%;
+    padding-right: 2%;
+
+}
+a:link, a:visited{
+    text-decoration: none;
+    color: aqua;
+    /*Add underline*/
+
+}
+a:hover{
+    text-decoration: underline;
+    color: #00BBFF;
 }
