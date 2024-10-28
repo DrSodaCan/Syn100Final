@@ -16,17 +16,22 @@ var userIcon = L.icon({
 
 // Array of waypoints with names, coordinates, descriptions, and image URLs
 
-// Display waypoints without user distance initially
+// Function to display waypoints on the map with clickable links
 function displayWaypoints(waypoints) {
     waypoints.forEach(function(waypoint) {
         L.marker(waypoint.coords)
             .addTo(map)
             .bindPopup(
-                `<b>${waypoint.name}</b><br>${waypoint.description}<br>
-        <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">`
+                `<b>${waypoint.name}</b><br>
+        ${waypoint.description}<br>
+        <a href="${waypoint.url}" target="_blank">
+          <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">
+        </a><br>
+        <a href="${waypoint.url}" target="_blank">Learn more</a>`
             );
     });
 }
+
 
 // Function to calculate the distance between two coordinates
 function calculateDistance(lat1, lon1, lat2, lon2) {

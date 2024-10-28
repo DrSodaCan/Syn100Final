@@ -1,32 +1,9 @@
 [
   {
-    "name": "San Francisco",
-    "coords": [37.7749, -122.4194],
-    "description": "Known for the Golden Gate Bridge, Alcatraz Island, and its hilly landscape.",
-    "imageUrl": "https://via.placeholder.com/100"
-  },
-  {
-    "name": "Los Angeles",
-    "coords": [34.0522, -118.2437],
-    "description": "The heart of the nation’s film and television industry, home to Hollywood.",
-    "imageUrl": "https://via.placeholder.com/100"
-  },
-  {
-    "name": "Yosemite National Park",
-    "coords": [37.8651, -119.5383],
-    "description": "Famous for its giant sequoias, stunning cliffs, and natural beauty.",
-    "imageUrl": "https://via.placeholder.com/100"
-  },
-  {
-    "name": "Lake Tahoe",
-    "coords": [39.0968, -120.0324],
-    "description": "A popular destination for winter sports and summer lake activities.",
-    "imageUrl": "https://via.placeholder.com/100"
-  },
-  {
-    "name": "San Diego",
-    "coords": [32.7157, -117.1611],
-    "description": "Known for its beaches, parks, and the famous San Diego Zoo.",
-    "imageUrl": "https://via.placeholder.com/100"
+    "name": "LA Wildlife and Poppy Bloom Mural",
+    "coords": [34.1173, -118.3753],
+    "description": "September 2024 | Location: Laurel Canyon, LA. | This piece is made by Jonathan Martinez. Martinez grew up in urban Los Angeles. Due to his upbringing he recounted how he was not exposed to the vibrant nature of California that exists outside of the city. To help remedy this issue for the next generation, he started in 2010 to make public mural artists of endangered species and native species. Urban dwellers will see these species threatened by climate change and feel more connected to them thus inspiring civic duty.  This art piece specifically depicts native wildlife from LA and his intention in doing so is to push back against the idea of LA being a concrete jungle devoid of nature. As well, his use of brighter colors adds a more hopeful tone to the idea of protecting these native species while the seamless blending of his paints emphasizes the idea of unity among the different environments in LA (the poppy fields, mountains, ocean).",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVJCQq0P0sMuymrHGPoSYQ-FKMiaCg3SxRcw&s",
+    "url": "https://www.instagram.com/art.ofthe.endangered/reel/C_jl5YKSEVz/"
   }
 ]
