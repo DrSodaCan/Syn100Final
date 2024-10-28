@@ -9,14 +9,17 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Custom icon for the user's location
-const userIcon = L.icon({
+let userIcon = L.icon({
     iconUrl: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
     iconSize: [32, 32],  // Size of the icon
     iconAnchor: [16, 32], // Point of the icon which will correspond to marker's location
     popupAnchor: [0, -32] // Point from which the popup should open relative to the iconAnchor
 });
+
+
 // Function to calculate the distance between two coordinates
 function calculateDistance(lat1, lon1, lat2, lon2) {
+    //formatted like this to account for earth being round
     const R = 6371; // Radius of Earth in kilometers
     const dLat = (lat2 - lat1) * Math.PI / 180;
     const dLon = (lon2 - lon1) * Math.PI / 180;
