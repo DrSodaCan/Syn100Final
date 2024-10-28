@@ -54,3 +54,7 @@ a:hover{
     color: #0088FF;
     text-decoration: underline;
 }
+
+.leaflet-popup-content{
+
+}
