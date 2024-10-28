@@ -1,15 +1,43 @@
 body{
-font-family: Roboto, Helvetica, sans-serif;
+    background-color: #121212;
+
+    font-family: Roboto, Helvetica, sans-serif;
 }
 #titlebar h1{
     font-family: Roboto, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
     margin-top: 25px;
+    color: #FFFFFF;
 }
 .textbox p{
     font-family: Roboto, Helvetica, sans-serif;
     text-align: justify;
     margin-right: 35%;
     margin-left: 5%;
+    color: #FFFFFF;
+}
+a:link, a:visited{
+    text-decoration: none;
+    color: aqua;
+    /*Add underline*/
+
+}
+a:hover{
+    text-decoration: underline;
+    color: #00BBFF;
+}
+body h1{
+    color: white;
+    text-align: center;
+}
+#main_bar{
+    text-align: center;
+    margin-top: 0;
+    padding-top: -50px;
+}
+#main_bar a{
+    padding-left: 2%;
+    padding-right: 2%;
+
 }
