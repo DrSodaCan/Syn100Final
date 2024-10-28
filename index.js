@@ -1,5 +1,3 @@
-import {waypoints} from "./waypoints";
-
 // Initialize the map centered on California
 var map = L.map('map').setView([36.7783, -119.4179], 6);
 
@@ -16,16 +14,19 @@ var userIcon = L.icon({
     popupAnchor: [0, -32]
 });
 
+// Array of waypoints with names, coordinates, descriptions, and image URLs
 
 // Display waypoints without user distance initially
-waypoints.forEach(function(waypoint) {
-    L.marker(waypoint.coords)
-        .addTo(map)
-        .bindPopup(
-            `<b>${waypoint.name}</b><br>${waypoint.description}<br>
-      <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">`
-        );
-});
+function displayWaypoints(waypoints) {
+    waypoints.forEach(function(waypoint) {
+        L.marker(waypoint.coords)
+            .addTo(map)
+            .bindPopup(
+                `<b>${waypoint.name}</b><br>${waypoint.description}<br>
+        <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">`
+            );
+    });
+}
 
 // Function to calculate the distance between two coordinates
 function calculateDistance(lat1, lon1, lat2, lon2) {
@@ -101,3 +102,36 @@ if (navigator.geolocation) {
 } else {
     alert("Geolocation is not supported by this browser.");
 }
+
+
+fetch('waypoints.json')
+    .then(response => response.json())
+    .then(waypoints => {
+        displayWaypoints(waypoints);
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    const userCoords = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    L.marker(userCoords, { icon: userIcon })
+                        .addTo(map)
+                        .bindPopup("<b>Your Location</b>")
+                        .openPopup();
+
+                    updateDistancesWithUserLocation(userCoords, waypoints);
+
+                    map.setView(userCoords, 7);
+                },
+                function(error) {
+                    console.error("Error retrieving location:", error.message);
+                }
+            );
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    })
+    .catch(error => console.error('Error loading waypoints:', error));

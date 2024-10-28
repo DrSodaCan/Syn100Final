@@ -1,0 +1,32 @@
+[
+  {
+    "name": "San Francisco",
+    "coords": [37.7749, -122.4194],
+    "description": "Known for the Golden Gate Bridge, Alcatraz Island, and its hilly landscape.",
+    "imageUrl": "https://via.placeholder.com/100"
+  },
+  {
+    "name": "Los Angeles",
+    "coords": [34.0522, -118.2437],
+    "description": "The heart of the nation’s film and television industry, home to Hollywood.",
+    "imageUrl": "https://via.placeholder.com/100"
+  },
+  {
+    "name": "Yosemite National Park",
+    "coords": [37.8651, -119.5383],
+    "description": "Famous for its giant sequoias, stunning cliffs, and natural beauty.",
+    "imageUrl": "https://via.placeholder.com/100"
+  },
+  {
+    "name": "Lake Tahoe",
+    "coords": [39.0968, -120.0324],
+    "description": "A popular destination for winter sports and summer lake activities.",
+    "imageUrl": "https://via.placeholder.com/100"
+  },
+  {
+    "name": "San Diego",
+    "coords": [32.7157, -117.1611],
+    "description": "Known for its beaches, parks, and the famous San Diego Zoo.",
+    "imageUrl": "https://via.placeholder.com/100"
+  }
+]
