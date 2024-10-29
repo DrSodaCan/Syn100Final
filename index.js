@@ -1,6 +1,14 @@
 // Initialize the map centered on California
-var map = L.map('map').setView([36.7783, -119.4179], 6);
-
+var map = L.map('map', {
+    center: [36.7783, -119.4179],
+    zoom: 6,
+    worldCopyJump: false,   // Prevents the map from repeating
+    maxBounds: [
+        [-90, -180],          // Southwest bound
+        [90, 180]             // Northeast bound
+    ],
+    maxBoundsViscosity: 1.0 // Keeps the map fully within these bounds
+});
 // Add OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
