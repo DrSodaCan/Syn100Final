@@ -9,6 +9,7 @@ var map = L.map('map', {
     ],
     maxBoundsViscosity: 1.0 // Keeps the map fully within these bounds
 });
+
 // Add OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -22,8 +23,6 @@ var userIcon = L.icon({
     popupAnchor: [0, -32]
 });
 
-// Array of waypoints with names, coordinates, descriptions, and image URLs
-
 // Function to display waypoints on the map with clickable links
 function displayWaypoints(waypoints) {
     waypoints.forEach(function(waypoint) {
@@ -31,15 +30,14 @@ function displayWaypoints(waypoints) {
             .addTo(map)
             .bindPopup(
                 `<b>${waypoint.name}</b><br>
-        ${waypoint.description}<br>
-        <a href="${waypoint.url}" target="_blank">
-          <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">
-        </a><br>
-        <a href="${waypoint.url}" target="_blank">Learn more</a>`
+                ${waypoint.description}<br>
+                <a href="${waypoint.url}" target="_blank">
+                  <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">
+                </a><br>
+                <a href="${waypoint.url}" target="_blank">Learn more</a>`
             );
     });
 }
-
 
 // Function to calculate the distance between two coordinates
 function calculateDistance(lat1, lon1, lat2, lon2) {
@@ -54,8 +52,8 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
     return R * c;
 }
 
-// Async function to update distances after obtaining user location
-function updateDistancesWithUserLocation(userCoords) {
+// Async function to update distances and highlight closest waypoint
+function updateDistancesWithUserLocation(userCoords, waypoints) {
     let closestWaypoint = null;
     let closestDistance = Infinity;
 
@@ -74,8 +72,8 @@ function updateDistancesWithUserLocation(userCoords) {
             .addTo(map)
             .bindPopup(
                 `<b>${waypoint.name}</b><br>${waypoint.description}<br>
-        <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image"><br>
-        <b>Distance:</b> ${distance.toFixed(2)} km`
+                <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image"><br>
+                <b>Distance:</b> ${distance.toFixed(2)} km`
             );
     });
 
@@ -83,40 +81,12 @@ function updateDistancesWithUserLocation(userCoords) {
     if (closestWaypoint) {
         L.circleMarker(closestWaypoint.coords, { color: 'red', radius: 10 })
             .addTo(map)
-            .bindPopup(`<b>Closest Waypoint:</b> ${closestWaypoint.name}`);
+            .bindPopup(`<b>Closest Waypoint:</b> ${closestWaypoint.name}`)
+            .openPopup();
     }
 }
 
-// Fetch user's location and update distances in a non-blocking way
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-        function(position) {
-            const userCoords = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-
-            // Add a marker for the user's location with the custom blue icon
-            L.marker(userCoords, { icon: userIcon })
-                .addTo(map)
-                .bindPopup("<b>Your Location</b>")
-                .openPopup();
-
-            // Update distances for each waypoint after getting user location
-            updateDistancesWithUserLocation(userCoords);
-
-            // Optional: Center the map around the user's location
-            map.setView(userCoords, 7);
-        },
-        function(error) {
-            console.error("Error retrieving location:", error.message);
-        }
-    );
-} else {
-    alert("Geolocation is not supported by this browser.");
-}
-
-
+// Fetch waypoints and user's location, then display them
 fetch('waypoints.json')
     .then(response => response.json())
     .then(waypoints => {
@@ -130,13 +100,16 @@ fetch('waypoints.json')
                         lng: position.coords.longitude
                     };
 
+                    // Add a marker for the user's location with the custom blue icon
                     L.marker(userCoords, { icon: userIcon })
                         .addTo(map)
                         .bindPopup("<b>Your Location</b>")
                         .openPopup();
 
+                    // Update distances for each waypoint after getting user location
                     updateDistancesWithUserLocation(userCoords, waypoints);
 
+                    // Optional: Center the map around the user's location
                     map.setView(userCoords, 7);
                 },
                 function(error) {
