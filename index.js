@@ -72,7 +72,10 @@ function updateDistancesWithUserLocation(userCoords, waypoints) {
             .addTo(map)
             .bindPopup(
                 `<b>${waypoint.name}</b><br>${waypoint.description}<br>
-                <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image"><br>
+                <a href="${waypoint.url}" target="_blank">
+                  <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">
+                </a><br>
+                <a href="${waypoint.url}" target="_blank">Learn more</a>\`
                 <b>Distance:</b> ${distance.toFixed(2)} km`
             );
     });
