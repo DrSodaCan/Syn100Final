@@ -28,5 +28,11 @@
     "coords": [32.7157, -117.1611],
     "description": "Known for its beaches, parks, and the famous San Diego Zoo.",
     "imageUrl": "https://via.placeholder.com/100"
+  },
+  {
+    "name": "Pisupuo lua afe",
+    "coords": [-41.29038223208699, 174.78214949583403],
+    "description": "(1994)<br>Museum of New Zealand Te Papa Tongarewa",
+    "imageUrl": "https://via.placeholder.com/100"
   }
 ]
