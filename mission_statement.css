@@ -10,12 +10,22 @@ body{
     margin-top: 25px;
     color: #FFFFFF;
 }
+#main-container{
+    margin-top: 50px;
+}
 .textbox p{
     font-family: Roboto, Helvetica, sans-serif;
     text-align: justify;
-    margin-right: 35%;
     margin-left: 5%;
+    margin-right: 5%;
+
     color: #FFFFFF;
+}
+.textbox{
+    background-color: #333333;
+    margin-right: 30%;
+    border-radius: 30px;
+    border: 3px solid #555555;
 }
 body h1{
     color: white;
