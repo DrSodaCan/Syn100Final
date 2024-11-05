@@ -7,6 +7,10 @@ h1{
     text-align: center;
 
 }
+h2{
+    color: white;
+    text-align: left;
+}
 
 #map {
     height: 600px;
@@ -56,5 +60,4 @@ a:hover{
 }
 
 .leaflet-popup-content{
-
 }

@@ -1,0 +1,27 @@
+<!-- TODO: remove mission_statement.css from art_descriptions.html -->
+
+body{
+    background-color: #121212;
+
+    font-family: Roboto, Helvetica, sans-serif;
+}
+#titlebar h1{
+    font-family: Roboto, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 25px;
+    color: #FFFFFF;
+}
+.art_desc {
+    margin-right: 35%;
+    margin-left: 5%;
+}
+.art_desc p{
+    font-family: Roboto, Helvetica, sans-serif;
+    text-align: justify;
+    color: #FFFFFF;
+}
+body h1{
+    color: white;
+    text-align: center;
+}

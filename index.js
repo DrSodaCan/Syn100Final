@@ -25,16 +25,17 @@ var userIcon = L.icon({
 
 // Function to display waypoints on the map with clickable links
 function displayWaypoints(waypoints) {
-    waypoints.forEach(function(waypoint) {
+    waypoints.forEach(function(waypoint, index) {
+        let redirect_url = "/art_descriptions.html?id=" + index;
         L.marker(waypoint.coords)
             .addTo(map)
             .bindPopup(
                 `<b>${waypoint.name}</b><br>
-                ${waypoint.description}<br>
+                    <!--${waypoint.description}<br>-->
                 <a href="${waypoint.url}" target="_blank">
                   <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">
                 </a><br>
-                <a href="${waypoint.url}" target="_blank">Learn more</a>`
+                <a href="${redirect_url}" target="_blank">Learn more</a>`
             );
     });
 }
@@ -57,7 +58,8 @@ function updateDistancesWithUserLocation(userCoords, waypoints) {
     let closestWaypoint = null;
     let closestDistance = Infinity;
 
-    waypoints.forEach(function(waypoint) {
+    waypoints.forEach(function(waypoint, index) {
+        let redirect_url = "/art_descriptions.html?id=" + index;
         // Calculate distance between user's location and waypoint
         const distance = calculateDistance(userCoords.lat, userCoords.lng, waypoint.coords[0], waypoint.coords[1]);
 
@@ -71,11 +73,12 @@ function updateDistancesWithUserLocation(userCoords, waypoints) {
         L.marker(waypoint.coords)
             .addTo(map)
             .bindPopup(
-                `<b>${waypoint.name}</b><br>${waypoint.description}<br>
+                `<b>${waypoint.name}</b>
+                    <!--${waypoint.description}<br>-->
                 <a href="${waypoint.url}" target="_blank">
                   <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">
                 </a><br>
-                <a href="${waypoint.url}" target="_blank">Learn more</a>\`
+                <a href="${redirect_url}" target="_blank">Learn more</a>\`
                 <b>Distance:</b> ${distance.toFixed(2)} km`
             );
     });
