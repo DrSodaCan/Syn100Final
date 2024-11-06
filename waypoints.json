@@ -16,17 +16,26 @@
     "coords": [41.4381, -112.6690],
     "description": "This piece is made by Robert Smithson. Smithson’s work focused on a wide range of environmental topics from mineralogy to climate change. However a large portion of his works focused on the fragility of ecosystems.This piece is a large spiral jetty in the Great Salt Lake. Smithson made the piece in 1970 to commemorate the celebration of the First Earth Day. It is composed of volcanic rock, mud, and sand all from the local environment. The lake itself is a terminating body of water meaning that only water flows into it and no water flows out. Due to that the lake’s water level shows if the environment is in a drought. If the water level is high then the jetty may not be visible at all. This interactive element of the art is not only fun but adequately communicates to the surrounding community if the Great Salt Lake is shrinking due to climate change.",
     "imageUrl": "https://lh3.googleusercontent.com/p/AF1QipNz5x9UBrZkhfkKx-Enu9jbKuqbZt4axNkFYCRw=s1360-w1360-h1020",
+<<<<<<< HEAD
+=======
+    "url": "https://www.diaart.org/visit/visit-our-locations-sites/robert-smithson-spiral-jetty"
+>>>>>>> e9c7842a527779b784e9fed62a2c8624642a42bf
   },
   {
     "name": "Fan Kuan Travelers Among Mountain Streams",
     "coords": [25.1024, 121.5485],
     "description": "This landscape piece is made by the famous Chinese landscape artist Fan Kuan. Fan Kuan was previously a political figure who became a recluse following political turmoil.[This piece depicts a landscape from the Shaanxi province in China. While many Chinese landscape paintings opted to depict vague shrubbery and crablike trees, Fan Kuan depicts native cypress and pine from the environment. His choice to make the landscape vertical rather than horizontal like a traditional landscape serves to make the mountains larger and presents the theme of the power and authority of nature. Similarly his choice to depict the travelers next to the stream as miniscule promotes this idea that humans exist within the context of nature rather than existing independently of nature. Although this painting was made 1000 years before climate change was a concern, adopting this thought process of our lives existing within the context of nature will go a great way in promoting climate change action.]",
     "imageUrl": "https://secretimages.org/wp-content/uploads/2019/11/Fan-Kuan-Travellers-featured.jpg",
+<<<<<<< HEAD
   },
   {
     "name": "Wanderer Above the Sea of Fog",
     "coords": [53.33, 10.00],
     "description": "1883",
     "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm2HeJk-dec5PMsCigQaroa22Avl_uaHBPcQ&s",
+=======
+    "url": "https://smarthistory.org/neo-confucianism-fan-kuan-travelers-by-streams-and-mountains/"
+
+>>>>>>> e9c7842a527779b784e9fed62a2c8624642a42bf
   }
 ]
