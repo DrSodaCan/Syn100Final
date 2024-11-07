@@ -32,7 +32,7 @@ function displayWaypoints(waypoints) {
             .bindPopup(
                 `<b>${waypoint.name}</b><br>
                     <!--${waypoint.description}<br>-->
-                <a href="${waypoint.url}" target="_blank">
+                <a href="${redirect_url}" target="_blank">
                   <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">
                 </a><br>
                 <a href="${redirect_url}" target="_blank">Learn more</a>`
@@ -73,9 +73,9 @@ function updateDistancesWithUserLocation(userCoords, waypoints) {
         L.marker(waypoint.coords)
             .addTo(map)
             .bindPopup(
-                `<b>${waypoint.name}</b>
+                `<b>${waypoint.name}<br></b>
                     <!--${waypoint.description}<br>-->
-                <a href="${waypoint.url}" target="_blank">
+                <a href="${redirect_url}" target="_blank">
                   <img src="${waypoint.imageUrl}" class="popup-image" alt="${waypoint.name} image">
                 </a><br>
                 <a href="${redirect_url}" target="_blank">Learn more</a>\`
