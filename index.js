@@ -26,7 +26,7 @@ var userIcon = L.icon({
 // Function to display waypoints on the map with clickable links
 function displayWaypoints(waypoints) {
     waypoints.forEach(function(waypoint, index) {
-        let redirect_url = "/art_descriptions.html?id=" + index;
+        let redirect_url = "/Syn100Final/art_descriptions.html?id=" + index;
         L.marker(waypoint.coords)
             .addTo(map)
             .bindPopup(
@@ -59,7 +59,7 @@ function updateDistancesWithUserLocation(userCoords, waypoints) {
     let closestDistance = Infinity;
 
     waypoints.forEach(function(waypoint, index) {
-        let redirect_url = "/art_descriptions.html?id=" + index;
+        let redirect_url = "/Syn100Final/art_descriptions.html?id=" + index;
         // Calculate distance between user's location and waypoint
         const distance = calculateDistance(userCoords.lat, userCoords.lng, waypoint.coords[0], waypoint.coords[1]);
 

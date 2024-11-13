@@ -23,4 +23,22 @@ body{
 body h1{
     color: white;
     text-align: center;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-weight: bold;
+
+}
+img{
+    max-height: 500px;
+    padding-bottom: 10px;
+    content-align: center;
+
+}
+.art_desc{
+    image-align: center;
+
+}
+
+b{
+    color: white;
+
 }
