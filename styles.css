@@ -11,6 +11,8 @@ h1{
 h2{
     color: white;
     text-align: left;
+    font-family: Roboto, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 #map {

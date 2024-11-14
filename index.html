@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Art For Change</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <style>
-    #map {
-      height: 600px;
-      width: 100%;
-    }
-  </style>
+    <title>Art For Change</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="title_page.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Art For Change | Map</h1>
+<!--
 <div id="main_bar">
-  <a href="index.html">Map</a>
-  <a href="mission_statement.html">Mission Statement</a>
+    <a href="index.html">Home</a>
+    <a href="map_screen.html">Map</a>
+    <a href="mission_statement.html">Mission Statement</a>
 </div>
-<div id="map"></div>
+    -->
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="index.js"></script>
+    <div id = "main_box">
+        <div class="fade-in">
+            <div id = "header">
+                <h1>Art For Change</h1>
+                <h2>Inspiring A Difference</h2>
+            </div>
+        </div>
+
+        <div id="textbox">
+            <p>Short description goes here</p>
+            <p>Map with locations of artpieces aimed at inspiring people to make a difference</p>
+        </div>
+        <div class="fade-in">
+            <div id="image_box"></div>
+            <div id="button_box"></div>
+        </div>
+    </div>
+
 </body>
 </html>

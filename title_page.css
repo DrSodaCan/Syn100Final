@@ -1,0 +1,36 @@
+#header{
+    padding-top: 50px;
+    text-align: center;
+}
+
+#header h1{
+    font-size: 3em;
+    padding-bottom: 0px;
+}
+#header h2{
+    padding-top: 0px;
+    font-size: 1.5em;
+    text-align: center;
+}
+#textbox{
+    padding-top: 50px;
+    padding-left: 50px;
+    width: 30%;
+}
+#textbox p{
+    color: white;
+    font-family: Roboto;
+    text-justify: inter-word;
+}
+.fade-in{
+    -webkit-animation: fade-in 3s;
+    -moz-animation: fade-in 3s;
+    -o-animation: fade-in 3s;
+    animation: fade-in 3s;
+
+}
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+

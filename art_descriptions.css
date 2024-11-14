@@ -33,6 +33,14 @@ img{
     content-align: center;
 
 }
+
+#main-container image{
+
+    image-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 .art_desc{
     image-align: center;
 
