@@ -22,6 +22,22 @@
     font-family: Roboto;
     text-justify: inter-word;
 }
+
+#buttons_box{
+    padding-top: 50px;
+    width: 25%;
+    float:right;
+}
+button{
+    float:right;
+}
+
+#image_box img{
+    width: 36%;
+    height: auto;
+    float: right;
+    padding-right: 100px;
+}
 .fade-in{
     -webkit-animation: fade-in 3s;
     -moz-animation: fade-in 3s;
