@@ -12,20 +12,25 @@ body{
 }
 #main-container{
     margin-top: 50px;
+    align-content: center;
 }
 .textbox p{
     font-family: Roboto, Helvetica, sans-serif;
     text-align: justify;
     margin-left: 5%;
     margin-right: 5%;
-
+    font-size: 17px;
     color: #FFFFFF;
+    align-content: center;
+
 }
 .textbox{
     background-color: #333333;
-    margin-right: 30%;
     border-radius: 30px;
     border: 3px solid #555555;
+    align-content: center;
+    margin-left: 15%;
+    margin-right: 15%
 }
 body h1{
     color: white;
