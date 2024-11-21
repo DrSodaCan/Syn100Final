@@ -22,10 +22,10 @@
     text-justify: inter-word;
 }
 #button_box {
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Horizontally center items */
-    align-items: center; /* Vertically center items (if needed) */
-    margin: 20px auto; /* Center the entire div horizontally and add vertical spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
 }
 
 button {
