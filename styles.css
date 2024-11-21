@@ -64,3 +64,16 @@ a:hover{
 
 .leaflet-popup-content{
 }
+
+
+.fade-in{
+    -webkit-animation: fade-in 3s;
+    -moz-animation: fade-in 3s;
+    -o-animation: fade-in 3s;
+    animation: fade-in 3s;
+
+}
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
