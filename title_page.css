@@ -13,7 +13,6 @@
     text-align: center;
 }
 #textbox{
-    padding-top: 50px;
     padding-left: 50px;
     width: 30%;
 }
@@ -22,21 +21,39 @@
     font-family: Roboto;
     text-justify: inter-word;
 }
+#button_box {
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Horizontally center items */
+    align-items: center; /* Vertically center items (if needed) */
+    margin: 20px auto; /* Center the entire div horizontally and add vertical spacing */
+}
 
-#buttons_box{
-    padding-top: 50px;
-    width: 25%;
-    float:right;
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
 }
-button{
-    float:right;
+button:hover {
+    background-color: #038754;
 }
+
 
 #image_box img{
     width: 36%;
     height: auto;
-    float: right;
-    padding-right: 100px;
+    align-content: center;
+    margin: auto;
+    display: block;
+}
+#image_box{
+    align-content: center;
+    margin: auto;
+    display: block;
 }
 .fade-in{
     -webkit-animation: fade-in 3s;
