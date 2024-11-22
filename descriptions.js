@@ -15,9 +15,10 @@ async function findByID(num) {
 
             // Update the HTML elements with the data from the waypoint
             title.textContent = waypoint.name;
-            description.textContent = waypoint.description;
+            description.innerHTML = waypoint.description; // Use innerHTML for line breaks
             photo.src = waypoint.imageUrl;
-            photo.alt = waypoint.name; // Optional: Set alt text for better accessibility
+            photo.alt = waypoint.name;
+
         } else {
             console.error("ID is out of range");
         }
