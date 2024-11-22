@@ -19,6 +19,13 @@ h2{
     height: 600px;
     width: 100%;
 }
+p{
+    font-family: Roboto, Helvetica, sans-serif;
+}
+a{
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
 
 #map a:hover{
     color: #222222;
