@@ -14,11 +14,12 @@ h2{
     font-family: Roboto, Helvetica, sans-serif;
     font-weight: bold;
 }
-
 #map {
-    height: 600px;
+    height: calc(100vh - 60px);
     width: 100%;
+
 }
+
 p{
     font-family: Roboto, Helvetica, sans-serif;
 }
