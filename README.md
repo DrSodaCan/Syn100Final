@@ -1,4 +1,4 @@
-# Syn100 Final
+# Art For Change
 
 Final project for synthesis 100; a map for art we hope will inspire change in indeviduals against the climate crisis
 
